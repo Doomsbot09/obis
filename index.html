@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Obis — Professional Minimal</title>
+  <meta name="description" content="Modern, bold and minimal landing page." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Obis</a>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a class="btn btn-ghost" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1>Build faster. Ship confidently.</h1>
+          <p class="lead">A modern platform to power your product launches — minimal, reliable and built for scale.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#pricing">Get started</a>
+            <a class="btn btn-outline" href="#about">Learn more</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="card-visual">
+            <div class="chip">Live preview</div>
+            <div class="mock">
+              <div class="mock-header"></div>
+              <div class="mock-body">
+                <div class="row"><div></div><div></div></div>
+                <div class="row"><div></div><div></div></div>
+                <div class="row"><div></div><div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="section-title">Core features</h2>
+        <p class="section-sub">Everything you need to run production systems with confidence.</p>
+
+        <div class="grid features-grid">
+          <div class="feature">
+            <h3>Reliable infrastructure</h3>
+            <p>Built for uptime and resilience so your product stays available.</p>
+          </div>
+          <div class="feature">
+            <h3>Developer-first</h3>
+            <p>Simple APIs, clear docs and predictable behavior for teams.</p>
+          </div>
+          <div class="feature">
+            <h3>Scales with you</h3>
+            <p>From prototype to production without painful migrations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section section-contrast">
+      <div class="container">
+        <h2 class="section-title">Pricing</h2>
+        <p class="section-sub">Transparent pricing built for teams of any size.</p>
+
+        <div class="grid pricing-grid">
+          <div class="card pricing-card">
+            <h4>Starter</h4>
+            <p class="price">Free</p>
+            <ul class="features">
+              <li>Basic features</li>
+              <li>Community support</li>
+            </ul>
+            <a class="btn btn-primary" href="#contact">Start free</a>
+          </div>
+
+          <div class="card pricing-card recommended">
+            <div class="badge">Popular</div>
+            <h4>Pro</h4>
+            <p class="price">$29/mo</p>
+            <ul class="features">
+              <li>Everything in Starter</li>
+              <li>Advanced controls</li>
+              <li>Priority support</li>
+            </ul>
+            <a class="btn btn-primary" href="#contact">Get Pro</a>
+          </div>
+
+          <div class="card pricing-card">
+            <h4>Enterprise</h4>
+            <p class="price">Custom</p>
+            <ul class="features">
+              <li>Dedicated support</li>
+              <li>Custom SLAs</li>
+            </ul>
+            <a class="btn btn-outline" href="#contact">Contact sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about-inner">
+        <div class="about-text">
+          <h2 class="section-title">About Obis</h2>
+          <p>Obis helps teams move from idea to launch with a predictable, developer-first platform. Minimal design, maximal clarity.</p>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+        <div class="about-stats">
+          <div class="stat">
+            <div class="num">99.99%</div>
+            <div class="label">Uptime</div>
+          </div>
+          <div class="stat">
+            <div class="num">1M+</div>
+            <div class="label">Requests / day</div>
+          </div>
+          <div class="stat">
+            <div class="num">24/7</div>
+            <div class="label">Support</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-cta">
+      <div class="container cta-inner">
+        <div>
+          <h2>Ready to get started?</h2>
+          <p>Sign up for a trial or contact our sales team to learn more.</p>
+        </div>
+        <form class="cta-form" action="#" onsubmit="event.preventDefault(); alert('Form submitted (demo)')">
+          <input name="email" type="email" placeholder="you@company.com" required>
+          <button class="btn btn-primary" type="submit">Start trial</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© {"2025"} Obis — All rights reserved.</div>
+      <div class="foot-links">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
