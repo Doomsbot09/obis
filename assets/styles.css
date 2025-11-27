@@ -315,4 +315,11 @@ a {
   .nav {
     position: relative;
   }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
 }
