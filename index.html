@@ -139,9 +139,18 @@
           <h3 class="section-subtitle">Request Early Access</h3>
           <form name="contact" method="POST" data-netlify="true" action="/thanks.html">
             <input type="hidden" name="form-name" value="contact" />
-            <label>Work Email<input type="email" name="email" required></label>
-            <label>Company<input type="text" name="company" required></label>
-            <label>Message<textarea name="message" required></textarea></label>
+            <label>
+              Work Email
+              <input type="email" name="email" required placeholder="your@company.com">
+            </label>
+            <label>
+              Company
+              <input type="text" name="company" required placeholder="Company name">
+            </label>
+            <label>
+              Message
+              <textarea name="message" required placeholder="Tell us about your equipment, data, and goals"></textarea>
+            </label>
             <button type="submit" class="btn btn-primary cursor-pointer">Request Access</button>
           </form>
         </div>
@@ -149,13 +158,13 @@
         <div>
           <h3 class="section-subtitle">Newsletter</h3>
           <form action="https://buttondown.email/api/emails/embed-subscribe/YOUR_LIST" method="post" target="_blank">
-            <label>Email<input type="email" name="email" required></label>
+            <label>Email<input type="email" name="email" required placeholder="your@company.com"></label>
             <button type="submit" class="btn hover-background">Subscribe</button>
           </form>
           <div class="social-links">
             <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
             <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-            <a href="mailto:contact@platinumcastles.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="mailto:platinumbusiness@platinumcastles.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
           </div>
         </div>
       </div>
