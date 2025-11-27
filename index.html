@@ -1,165 +1,193 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Obis — Professional Minimal</title>
-  <meta name="description" content="Modern, bold and minimal landing page." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
+  <meta charset="utf-8">
+  <title>OBIS — Operational Behaviour & Intelligence System</title>
+  <meta name="description" content="OBIS fuses auditable evidence with GPT reasoning to deliver trusted, actionable diagnostics—grounded in your data. Request early access.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://www.platinumcastles.com/">
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/icon-192.png">
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#">Obis</a>
-      <nav class="nav">
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#about">About</a>
-        <a class="btn btn-ghost" href="#contact">Contact</a>
-      </nav>
-    </div>
+  <header class="nav-container">
+    <nav class="nav">
+      <a href="/" class="brand">OBIS</a>
+
+      <!-- Mobile Menu Button -->
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+
+      <div class="nav-links">
+        <a href="#how">How It Works</a>
+        <a href="#layers">Layers</a>
+        <a href="#contact">Request Access</a>
+      </div>
+    </nav>
   </header>
 
+
   <main>
+    <!-- HERO -->
     <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <h1>Build faster. Ship confidently.</h1>
-          <p class="lead">A modern platform to power your product launches — minimal, reliable and built for scale.</p>
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="#pricing">Get started</a>
-            <a class="btn btn-outline" href="#about">Learn more</a>
-          </div>
+      <div class="hero-inner">
+        <h1 class="hero-title">Deterministic diagnostics for industrial systems</h1>
+        <p class="hero-subtitle">
+          OBIS fuses auditable evidence with GPT reasoning to deliver trusted, actionable diagnostics—grounded in your data.
+        </p>
+        <div class="cta-row">
+          <a href="#contact" class="btn btn-primary">Request Early Access</a>
+          <a href="#how" class="btn btn-outline">How It Works</a>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="card-visual">
-            <div class="chip">Live preview</div>
-            <div class="mock">
-              <div class="mock-header"></div>
-              <div class="mock-body">
-                <div class="row"><div></div><div></div></div>
-                <div class="row"><div></div><div></div></div>
-                <div class="row"><div></div><div></div></div>
-              </div>
-            </div>
-          </div>
+        <!-- <img src="/assets/hero-illustration.png" alt="OBIS evidence loop" class="hero-image"> -->
+      </div>
+    </section>
+
+    <!-- VALUE PROPS -->
+    <section class="section section-alt">
+      <div class="container grid-3">
+        <div class="card">
+          <h3>Deterministic Evidence</h3>
+          <p>Layer 1 converts operational data into time-stamped proof stamps—no speculation.</p>
+        </div>
+        <div class="card">
+          <h3>Industrial Integrations</h3>
+          <p>BACnet, Modbus, OPC UA, MQTT, historians—normalized into a single schema.</p>
+        </div>
+        <div class="card">
+          <h3>Safe AI Reasoning</h3>
+          <p>Rule-bounded GPT grounded in your Layer-1 Evidence Block for structured, auditable recommendations.</p>
         </div>
       </div>
     </section>
 
-    <section id="features" class="section">
-      <div class="container">
-        <h2 class="section-title">Core features</h2>
-        <p class="section-sub">Everything you need to run production systems with confidence.</p>
+    <!-- HOW IT WORKS -->
+    <section id="how" class="section">
+      <div class="container narrow">
+        <h2 class="section-title">How It Works</h2>
+        <ol class="steps">
+          <li><strong>Upload data</strong> or connect live sensors.</li>
+          <li><strong>Evidence Loop</strong> normalizes, baselines, and stamps anomalies.</li>
+          <li><strong>Suggestions</strong> grounded in evidence: root cause, actions, impact.</li>
+        </ol>
+      </div>
+    </section>
 
-        <div class="grid features-grid">
-          <div class="feature">
-            <h3>Reliable infrastructure</h3>
-            <p>Built for uptime and resilience so your product stays available.</p>
-          </div>
-          <div class="feature">
-            <h3>Developer-first</h3>
-            <p>Simple APIs, clear docs and predictable behavior for teams.</p>
-          </div>
-          <div class="feature">
-            <h3>Scales with you</h3>
-            <p>From prototype to production without painful migrations.</p>
-          </div>
+    <!-- LAYERS -->
+    <section id="layers" class="section section-alt">
+      <div class="container grid-3">
+        <div class="card">
+          <h3>Layer 1 — Evidence Loop</h3>
+          <p>Normalization, baselines (7/30/90 days), anomaly detection, and time-anchored proof stamps.</p>
+        </div>
+        <div class="card">
+          <h3>Layer 2 — Integration Engine</h3>
+          <p>Optional real-time protocols with normalization into one schema.</p>
+        </div>
+        <div class="card">
+          <h3>Layer 3 — Suggestion Engine</h3>
+          <p>GPT transforms evidence into structured outputs and actionable insights.</p>
         </div>
       </div>
     </section>
 
-    <section id="pricing" class="section section-contrast">
-      <div class="container">
-        <h2 class="section-title">Pricing</h2>
-        <p class="section-sub">Transparent pricing built for teams of any size.</p>
-
-        <div class="grid pricing-grid">
-          <div class="card pricing-card">
-            <h4>Starter</h4>
-            <p class="price">Free</p>
-            <ul class="features">
-              <li>Basic features</li>
-              <li>Community support</li>
-            </ul>
-            <a class="btn btn-primary" href="#contact">Start free</a>
-          </div>
-
-          <div class="card pricing-card recommended">
-            <div class="badge">Popular</div>
-            <h4>Pro</h4>
-            <p class="price">$29/mo</p>
-            <ul class="features">
-              <li>Everything in Starter</li>
-              <li>Advanced controls</li>
-              <li>Priority support</li>
-            </ul>
-            <a class="btn btn-primary" href="#contact">Get Pro</a>
-          </div>
-
-          <div class="card pricing-card">
-            <h4>Enterprise</h4>
-            <p class="price">Custom</p>
-            <ul class="features">
-              <li>Dedicated support</li>
-              <li>Custom SLAs</li>
-            </ul>
-            <a class="btn btn-outline" href="#contact">Contact sales</a>
-          </div>
-        </div>
+    <!-- INTEGRATIONS -->
+    <section class="section">
+      <div class="container narrow">
+        <h2 class="section-title">Integrations</h2>
+        <p class="muted">
+          BACnet, Modbus, OPC UA/DA, MQTT, Tridium Niagara, OSIsoft PI, Ignition, Wonderware, FactoryTalk, GE Proficy, AWS IoT, Azure IoT, Google IoT, AHRI/ASHRAE/OEM curves.
+        </p>
       </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="container about-inner">
-        <div class="about-text">
-          <h2 class="section-title">About Obis</h2>
-          <p>Obis helps teams move from idea to launch with a predictable, developer-first platform. Minimal design, maximal clarity.</p>
-          <a class="btn btn-ghost" href="#contact">Get in touch</a>
-        </div>
-        <div class="about-stats">
-          <div class="stat">
-            <div class="num">99.99%</div>
-            <div class="label">Uptime</div>
-          </div>
-          <div class="stat">
-            <div class="num">1M+</div>
-            <div class="label">Requests / day</div>
-          </div>
-          <div class="stat">
-            <div class="num">24/7</div>
-            <div class="label">Support</div>
-          </div>
-        </div>
+    <!-- FAQ -->
+    <section class="section section-alt">
+      <div class="container narrow">
+        <h2 class="section-title">FAQ</h2>
+
+        <details class="faq-item">
+          <summary>How do you prevent hallucinations?</summary>
+          <p>OBIS grounds GPT strictly in the Layer-1 Evidence Block and enforces rule-bounded reasoning.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What data do we need?</summary>
+          <p>Start with CSV or XLSX exports—focus on power, temperature, pressure, vibration, load, and notes.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can OBIS run without live integrations?</summary>
+          <p>Yes. MVP works with uploads. Layer 2 adds real-time diagnostics.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Security?</summary>
+          <p>API-keys, scoped tenant storage, CORS, secrets management. External audits available for partners.</p>
+        </details>
       </div>
     </section>
 
-    <section id="contact" class="section section-cta">
-      <div class="container cta-inner">
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container grid-2 card">
         <div>
-          <h2>Ready to get started?</h2>
-          <p>Sign up for a trial or contact our sales team to learn more.</p>
+          <h3 class="section-subtitle">Request Early Access</h3>
+          <form name="contact" method="POST" data-netlify="true" action="/thanks.html">
+            <input type="hidden" name="form-name" value="contact" />
+            <label>Work Email<input type="email" name="email" required></label>
+            <label>Company<input type="text" name="company" required></label>
+            <label>Message<textarea name="message" required></textarea></label>
+            <button type="submit" class="btn btn-primary cursor-pointer">Request Access</button>
+          </form>
         </div>
-        <form class="cta-form" action="#" onsubmit="event.preventDefault(); alert('Form submitted (demo)')">
-          <input name="email" type="email" placeholder="you@company.com" required>
-          <button class="btn btn-primary" type="submit">Start trial</button>
-        </form>
+
+        <div>
+          <h3 class="section-subtitle">Newsletter</h3>
+          <form action="https://buttondown.email/api/emails/embed-subscribe/YOUR_LIST" method="post" target="_blank">
+            <label>Email<input type="email" name="email" required></label>
+            <button type="submit" class="btn hover-background">Subscribe</button>
+          </form>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="mailto:contact@platinumcastles.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© {"2025"} Obis — All rights reserved.</div>
-      <div class="foot-links">
-        <a href="/privacy.html">Privacy</a>
-        <a href="/terms.html">Terms</a>
-      </div>
-    </div>
+  </main>
+  
+  <footer class="footer">
+    <a href="/privacy.html">Privacy</a>
+
+    <span>
+      © <span id="year"></span> OBIS  
+      • Powered by Platinum Castles & Platinum Tech Enterprise
+    </span>
   </footer>
 
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector(".nav-toggle");
+    const links = document.querySelector(".nav-links");
+    const navItems = document.querySelectorAll(".nav-links a");
+
+    toggle.addEventListener("click", () => {
+      links.classList.toggle("show");
+    });
+
+    // Close menu when clicking a link (mobile)
+    navItems.forEach(item => {
+      item.addEventListener("click", () => {
+        links.classList.remove("show");
+      });
+    });
+  </script>
 </body>
 </html>
