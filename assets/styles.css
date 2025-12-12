@@ -148,6 +148,11 @@ textarea { min-height: 120px; }
   margin-bottom: 1rem;
 }
 
+.faq-item:hover {
+  background-color: var(--accent);
+  cursor: pointer;
+}
+
 /* FOOTER */
 .footer {
   border-top: 1px solid #1e293b;

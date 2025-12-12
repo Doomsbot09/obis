@@ -112,22 +112,47 @@
 
         <details class="faq-item">
           <summary>How do you prevent hallucinations?</summary>
-          <p>OBIS grounds GPT strictly in the Layer-1 Evidence Block and enforces rule-bounded reasoning.</p>
+          <p>OBIS strictly grounds GPT in a deterministic Evidence Block built by Layer 1 (baseline comparisons, anomalies, Proof Stamps). We enforce rule-bounded reasoning via a master system prompt, use fact-mirroring logic and controlled innovation gates, and keep temperature low. The model cannot override the evidence.</p>
         </details>
 
         <details class="faq-item">
-          <summary>What data do we need?</summary>
-          <p>Start with CSV or XLSX exports—focus on power, temperature, pressure, vibration, load, and notes.</p>
+          <summary>What data do we need to start?</summary>
+          <p>Start with CSV or Excel exports (or historian extracts) with timestamps and key metrics: power, temperature, pressure, vibration, load, and notes. OBIS auto-detects columns, converts units (e.g., °F/°C, psi/bar, kW/W), aligns timestamps, filters noise, and maps into a canonical schema.</p>
         </details>
 
         <details class="faq-item">
           <summary>Can OBIS run without live integrations?</summary>
-          <p>Yes. MVP works with uploads. Layer 2 adds real-time diagnostics.</p>
+          <p>Yes. The MVP runs entirely on file uploads. Live protocols (BACnet, Modbus, OPC UA, MQTT, Niagara, historians) are part of Layer 2 and can be added later without reworking your data.</p>
         </details>
 
         <details class="faq-item">
-          <summary>Security?</summary>
-          <p>API-keys, scoped tenant storage, CORS, secrets management. External audits available for partners.</p>
+          <summary>What exactly does OBIS output</summary>
+          <p>Layer 1 computes baselines (7/30/90-day windows), detects deviations (e.g., z-score/MAD thresholds, trend slopes), and matches prior anomaly signatures. It then generates time-anchored statements such as: “Compressor power increased 16.3% vs 30-day baseline.”</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Which systems and protocols do you support</summary>
+          <p>Protocols: BACnet (MS/TP, IP), Modbus (TCP/RTU), OPC UA/DA, MQTT; Niagara Framework. Historians: OSIsoft PI, Ignition, Wonderware, FactoryTalk, GE Proficy. Cloud IoT: AWS, Azure, and Google. Standards: AHRI/ASHRAE and OEM curves.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do you handle security and privacy</summary>
+          <p>API-key enforcement per tenant, CORS restrictions in production, and secrets stored in a professional secrets manager. Data is isolated by tenant and can be retained per policy. External audits (e.g., SSL Labs, ImmuniWeb Community) can be shared with partners.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is Layer 2 required for the MVP</summary>
+          <p>No. Layer 2 is optional and provides real-time depth. The MVP flow is: upload → Evidence Loop (Layer 1) → Suggestion Engine (Layer 3) → structured report.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How does the pattern library learn</summary>
+          <p>OBIS creates signature hashes for symptom/evidence clusters. Technician feedback updates occurrence counts, success rate, and confidence for each pattern, improving future matches.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Who is OBIS for</summary>
+          <p>Plant managers, reliability engineers, energy managers, and operations teams who need trusted, auditable diagnostics across equipment fleets and sites.</p>
         </details>
       </div>
     </section>
@@ -139,6 +164,8 @@
           <h3 class="section-subtitle">Request Early Access</h3>
           <form name="contact" method="POST" data-netlify="true" action="/thanks.html">
             <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
+            
             <label>
               Work Email
               <input type="email" name="email" required placeholder="your@company.com">
@@ -182,6 +209,35 @@
   </footer>
 
   <script>
+    function encode(data) {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+    }
+
+    const handleSubmit = (event) => {
+      event.preventDefault();
+
+      const form = event.target;
+
+      const data = {
+        "form-name": form.getAttribute("name"),
+        email: form.email.value,
+        company: form.company.value,
+        message: form.message.value,
+      };
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(data)
+      })
+      .then(() => window.location.href = "/thanks.html")
+      .catch((error) => alert(error));
+    };
+
+    document.querySelector('form[name="contact"]').addEventListener("submit", handleSubmit);
+    document.getElementById('netlify-form')
     document.getElementById('year').textContent = new Date().getFullYear();
     const toggle = document.querySelector(".nav-toggle");
     const links = document.querySelector(".nav-links");
