@@ -189,8 +189,14 @@
 
         <div>
           <h3 class="section-subtitle">Newsletter</h3>
-          <form action="https://buttondown.email/api/emails/embed-subscribe/YOUR_LIST" method="post" target="_blank">
-            <label>Email<input type="email" name="email" required placeholder="your@company.com"></label>
+          <form 
+            action="https://buttondown.com/api/emails/embed-subscribe/obis" 
+            method="post" 
+            class="embeddable-buttondown-form"
+            target="_blank">
+            <label for="bd-email">Email
+              <input type="email" name="email" id="bd-email" required placeholder="your@company.com">
+            </label>
             <button type="submit" class="btn hover-background">Subscribe</button>
           </form>
           <div class="social-links">
